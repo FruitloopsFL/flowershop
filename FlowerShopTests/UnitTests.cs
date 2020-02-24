@@ -1,4 +1,6 @@
 using NUnit.Framework;
+using NSubstitute;
+using FlowerShop;
 
 namespace Tests
 {
@@ -12,7 +14,14 @@ namespace Tests
         [Test]
         public void Test1()
         {
-            Assert.Pass();
+            //Assign
+            IOrder o = Substitute.For<Order>();
+            IClient c = Substitute.For<Client>();
+            //Act
+            
+            
+            //Assert
+            o.Received();
         }
     }
 }
